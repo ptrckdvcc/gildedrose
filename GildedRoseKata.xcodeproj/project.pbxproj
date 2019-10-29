@@ -10,6 +10,8 @@
 		F80CE9D023683BD2009FEA4C /* GildedRoseKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80CE9C623683BD2009FEA4C /* GildedRoseKata.framework */; };
 		F80CE9D523683BD2009FEA4C /* GildedRoseKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80CE9D423683BD2009FEA4C /* GildedRoseKataTests.swift */; };
 		F80CE9D723683BD2009FEA4C /* GildedRoseKata.h in Headers */ = {isa = PBXBuildFile; fileRef = F80CE9C923683BD2009FEA4C /* GildedRoseKata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F80CE9E123683C04009FEA4C /* GildedRose.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80CE9E023683C04009FEA4C /* GildedRose.swift */; };
+		F80CE9E323683C27009FEA4C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80CE9E223683C27009FEA4C /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		F80CE9CF23683BD2009FEA4C /* GildedRoseKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GildedRoseKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80CE9D423683BD2009FEA4C /* GildedRoseKataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GildedRoseKataTests.swift; sourceTree = "<group>"; };
 		F80CE9D623683BD2009FEA4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F80CE9E023683C04009FEA4C /* GildedRose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GildedRose.swift; sourceTree = "<group>"; };
+		F80CE9E223683C27009FEA4C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				F80CE9C923683BD2009FEA4C /* GildedRoseKata.h */,
+				F80CE9E023683C04009FEA4C /* GildedRose.swift */,
+				F80CE9E223683C27009FEA4C /* Item.swift */,
 				F80CE9CA23683BD2009FEA4C /* Info.plist */,
 			);
 			path = GildedRoseKata;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					F80CE9C523683BD2009FEA4C = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					F80CE9CE23683BD2009FEA4C = {
 						CreatedOnToolsVersion = 11.1;
@@ -195,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80CE9E323683C27009FEA4C /* Item.swift in Sources */,
+				F80CE9E123683C04009FEA4C /* GildedRose.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 		F80CE9DB23683BD2009FEA4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 846S5GY383;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.diviacco.GildedRoseKata;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +375,7 @@
 		F80CE9DC23683BD2009FEA4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 846S5GY383;
@@ -388,6 +400,7 @@
 		F80CE9DE23683BD2009FEA4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 846S5GY383;
 				INFOPLIST_FILE = GildedRoseKataTests/Info.plist;
@@ -406,6 +419,7 @@
 		F80CE9DF23683BD2009FEA4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 846S5GY383;
 				INFOPLIST_FILE = GildedRoseKataTests/Info.plist;

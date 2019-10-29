@@ -9,26 +9,18 @@
 import XCTest
 @testable import GildedRoseKata
 
-class GildedRoseKataTests: XCTestCase {
+class GildedRoseTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testFoo() {
+        let items = [Item(name: "foo", sellIn: 0, quality: 0)]
+        let app = GildedRose(items: items);
+        app.updateQuality();
+        XCTAssertEqual("foo", app.items[0].name);
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    static var allTests : [(String, (GildedRoseTests) -> () throws -> Void)] {
+        return [
+            ("testFoo", testFoo),
+        ]
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
