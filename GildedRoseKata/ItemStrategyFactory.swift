@@ -23,7 +23,7 @@ class ItemStrategyFactory {
             case .brie: return BrieItemStrategy()
             case .sulfuras: return SulfurasItemStrategy()
             case .backstage: return BackstageItemStrategy()
-            case .conjured: ()
+            case .conjured: return ConjuredItemStrategy()
             }
         }
         return NormalItemStrategy()

@@ -11,17 +11,17 @@ import Foundation
 import XCTest
 @testable import GildedRoseKata
 
-class ConjuredItemsTests : XCTestCase {
+class NormalItemsTests : XCTestCase {
 
     func testUpdateSellInDecreasing() {
-        let input = Item(name: Names.conjured.rawValue, sellIn: 5, quality: 7)
+        let input = Item(name: Names.normal1.rawValue, sellIn: 5, quality: 7)
         let sut = GildedRose(items: [input])
         sut.updateQuality()
         XCTAssertEqual(sut.items.first!.sellIn, 4, "SellIn should be decreased by 1")
     }
      
     func testUpdateSellInDecreasingAfterNiterations() {
-        let input = Item(name: Names.conjured.rawValue, sellIn: 2, quality: 7)
+        let input = Item(name: Names.normal1.rawValue, sellIn: 2, quality: 7)
         let iterations = 4
         let expectedSellIn = input.sellIn - iterations
         
@@ -32,23 +32,23 @@ class ConjuredItemsTests : XCTestCase {
     }
     
     func testUpdateQualityDecreasingBy1NearSellDate() {
-        let input = Item(name: Names.conjured.rawValue, sellIn: 1, quality: 7)
+        let input = Item(name: Names.normal2.rawValue, sellIn: 1, quality: 7)
+        let sut = GildedRose(items: [input])
+        sut.updateQuality()
+        XCTAssertEqual(sut.items.first!.quality, 6, "Quality should be decreased by 1")
+    }
+    
+    func testUpdateQualityDecreasingBy2AtSellDate() {
+        let input = Item(name: Names.normal1.rawValue, sellIn: 0, quality: 7)
         let sut = GildedRose(items: [input])
         sut.updateQuality()
         XCTAssertEqual(sut.items.first!.quality, 5, "Quality should be decreased by 1")
     }
     
-    func testUpdateQualityDecreasingBy2AtSellDate() {
-        let input = Item(name: Names.conjured.rawValue, sellIn: 0, quality: 7)
-        let sut = GildedRose(items: [input])
-        sut.updateQuality()
-        XCTAssertEqual(sut.items.first!.quality, 3, "Quality should be decreased by 1")
-    }
-    
     func testUpdateQualityDecreasingBy2AfterSellDate() {
-        let input = Item(name: Names.conjured.rawValue, sellIn: -3, quality: 7)
+        let input = Item(name: Names.normal2.rawValue, sellIn: -3, quality: 7)
         let sut = GildedRose(items: [input])
         sut.updateQuality()
-        XCTAssertEqual(sut.items.first!.quality, 3, "Quality should be decreased by 1")
+        XCTAssertEqual(sut.items.first!.quality, 5, "Quality should be decreased by 1")
     }
 }

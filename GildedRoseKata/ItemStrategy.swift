@@ -62,3 +62,17 @@ class BackstageItemStrategy : ItemStrategy {
     }
 }
 
+class ConjuredItemStrategy : ItemStrategy {
+    func updateQuality(item: Item) {
+        if item.quality > 0 {
+            switch item.sellIn {
+            case Int.min...0: item.quality -= 4
+            default:  item.quality -= 2
+            }
+        }
+    }
+    
+    func updateSellIn(item: Item) {
+        item.sellIn -= 1
+    }
+}
