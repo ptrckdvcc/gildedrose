@@ -23,10 +23,22 @@ public class GildedRose {
     public func updateQuality() {
         for item in items {
             if item.name == Names.brie.rawValue {
-                item.sellIn -= 1
                 if item.quality < 50 {
                     item.quality += 1
                 }
+                item.sellIn -= 1
+            } else if item.name == Names.sulfuras.rawValue {
+              
+            } else if item.name == Names.backstage.rawValue {
+                if item.quality < 50 {
+                    switch item.sellIn {
+                    case Int.min...0: item.quality = 0
+                    case 0..<6: item.quality += 3
+                    case 6..<11: item.quality += 2
+                    default: item.quality += 1
+                    }
+                }
+                item.sellIn -= 1
             } else {
                 updateQuality(item: item)
             }
