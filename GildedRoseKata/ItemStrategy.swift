@@ -9,8 +9,7 @@
 import Foundation
 
 protocol ItemStrategy {
-    func updateQuality(item: Item)
-    func updateSellIn(item: Item)
+    func update(item: Item)
 }
 
 extension ItemStrategy {
@@ -25,40 +24,37 @@ extension ItemStrategy {
             item.quality = 50
         }
     }
+    
+    func updateSellIn(item: Item) {
+        item.sellIn -= 1
+    }
 }
 
 class NormalItemStrategy : ItemStrategy {
-    func updateQuality(item: Item) {
+    func update(item: Item) {
         switch item.sellIn {
         case Int.min...0: item.quality -= 2
         default: item.quality -= 1
         }
         adjustQualityLowerBound(item: item)
-    }
-    
-    func updateSellIn(item: Item) {
-        item.sellIn -= 1
+        updateSellIn(item: item)
     }
 }
 
 class BrieItemStrategy : ItemStrategy {
-    func updateQuality(item: Item) {
+    func update(item: Item) {
         item.quality += 1
         adjustQualityUpperBound(item: item)
-    }
-    
-    func updateSellIn(item: Item) {
-        item.sellIn -= 1
+        updateSellIn(item: item)
     }
 }
 
 class SulfurasItemStrategy : ItemStrategy {
-    func updateQuality(item: Item) {}
-    func updateSellIn(item: Item) {}
+    func update(item: Item) {}
 }
 
 class BackstageItemStrategy : ItemStrategy {
-    func updateQuality(item: Item) {
+    func update(item: Item) {
         switch item.sellIn {
         case Int.min...0: item.quality = 0
         case 0..<6: item.quality += 3
@@ -67,23 +63,17 @@ class BackstageItemStrategy : ItemStrategy {
         }
         adjustQualityLowerBound(item: item)
         adjustQualityUpperBound(item: item)
-    }
-    
-    func updateSellIn(item: Item) {
-        item.sellIn -= 1
+        updateSellIn(item: item)
     }
 }
 
 class ConjuredItemStrategy : ItemStrategy {
-    func updateQuality(item: Item) {
+    func update(item: Item) {
         switch item.sellIn {
         case Int.min...0: item.quality -= 4
         default: item.quality -= 2
         }
         adjustQualityLowerBound(item: item)
-    }
-    
-    func updateSellIn(item: Item) {
-        item.sellIn -= 1
+        updateSellIn(item: item)
     }
 }

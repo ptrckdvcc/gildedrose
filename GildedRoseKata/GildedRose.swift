@@ -17,8 +17,7 @@ public class GildedRose {
     public func updateQuality() {
         for item in items {
             let strategy = strategyFactory.strategyFor(item: item)
-            strategy.updateQuality(item: item)
-            strategy.updateSellIn(item: item)
+            strategy.update(item: item)
         }
      }
 }
