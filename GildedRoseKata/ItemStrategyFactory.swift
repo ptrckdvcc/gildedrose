@@ -10,7 +10,7 @@ import Foundation
 
 class ItemStrategyFactory {
     
-    enum Names : String {
+    private enum Names : String {
         case brie = "Aged Brie"
         case sulfuras = "Sulfuras, Hand of Ragnaros"
         case backstage = "Backstage passes to a TAFKAL80ETC concert"
