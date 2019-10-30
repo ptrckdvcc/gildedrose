@@ -20,35 +20,23 @@ public class GildedRose {
         self.items = items
     }
     
+    private func strategyFor(item: Item) -> ItemStrategy? {
+        if let name = Names(rawValue: item.name) {
+            switch name {
+            case .brie: return BrieItemStrategy()
+            case .sulfuras: return SulfurasItemStrategy()
+            case .backstage: return BackstageItemStrategy()
+            case .conjured: ()
+            }
+        }
+        return NormalItemStrategy()
+    }
+    
     public func updateQuality() {
         for item in items {
-            if item.name == Names.brie.rawValue {
-                if item.quality < 50 {
-                    item.quality += 1
-                }
-                item.sellIn -= 1
-            } else if item.name == Names.sulfuras.rawValue {
-              
-            } else if item.name == Names.backstage.rawValue {
-                if item.quality < 50 {
-                    switch item.sellIn {
-                    case Int.min...0: item.quality = 0
-                    case 0..<6: item.quality += 3
-                    case 6..<11: item.quality += 2
-                    default: item.quality += 1
-                    }
-                }
-                item.sellIn -= 1
-            } else {
-                //Normal items
-                if item.quality > 0 {
-                    switch item.sellIn {
-                    case Int.min...0: item.quality -= 2
-                    default:  item.quality -= 1
-                    }
-                }
-                item.sellIn -= 1
-            }
+            guard let strategy = strategyFor(item: item) else { continue }
+            strategy.updateQuality(item: item)
+            strategy.updateSellIn(item: item)
         }
      }
 }
