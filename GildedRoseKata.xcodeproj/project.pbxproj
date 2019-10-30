@@ -12,6 +12,12 @@
 		F80CE9D723683BD2009FEA4C /* GildedRoseKata.h in Headers */ = {isa = PBXBuildFile; fileRef = F80CE9C923683BD2009FEA4C /* GildedRoseKata.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F80CE9E123683C04009FEA4C /* GildedRose.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80CE9E023683C04009FEA4C /* GildedRose.swift */; };
 		F80CE9E323683C27009FEA4C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80CE9E223683C27009FEA4C /* Item.swift */; };
+		F852C55F236871000035929A /* AllItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C55E236871000035929A /* AllItemsTests.swift */; };
+		F852C5632368720A0035929A /* SulfuraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C5602368720A0035929A /* SulfuraTests.swift */; };
+		F852C5642368720A0035929A /* BackstageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C5612368720A0035929A /* BackstageTests.swift */; };
+		F852C5652368720A0035929A /* BrieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C5622368720A0035929A /* BrieTests.swift */; };
+		F852C5672368721A0035929A /* NormalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C5662368721A0035929A /* NormalTests.swift */; };
+		F852C569236873300035929A /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C568236873300035929A /* Seeds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,12 @@
 		F80CE9D623683BD2009FEA4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F80CE9E023683C04009FEA4C /* GildedRose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GildedRose.swift; sourceTree = "<group>"; };
 		F80CE9E223683C27009FEA4C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F852C55E236871000035929A /* AllItemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllItemsTests.swift; sourceTree = "<group>"; };
+		F852C5602368720A0035929A /* SulfuraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SulfuraTests.swift; sourceTree = "<group>"; };
+		F852C5612368720A0035929A /* BackstageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstageTests.swift; sourceTree = "<group>"; };
+		F852C5622368720A0035929A /* BrieTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrieTests.swift; sourceTree = "<group>"; };
+		F852C5662368721A0035929A /* NormalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalTests.swift; sourceTree = "<group>"; };
+		F852C568236873300035929A /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +98,13 @@
 		F80CE9D323683BD2009FEA4C /* GildedRoseKataTests */ = {
 			isa = PBXGroup;
 			children = (
+				F852C568236873300035929A /* Seeds.swift */,
 				F80CE9D423683BD2009FEA4C /* GildedRoseKataTests.swift */,
+				F852C55E236871000035929A /* AllItemsTests.swift */,
+				F852C5662368721A0035929A /* NormalTests.swift */,
+				F852C5612368720A0035929A /* BackstageTests.swift */,
+				F852C5622368720A0035929A /* BrieTests.swift */,
+				F852C5602368720A0035929A /* SulfuraTests.swift */,
 				F80CE9D623683BD2009FEA4C /* Info.plist */,
 			);
 			path = GildedRoseKataTests;
@@ -211,7 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F852C55F236871000035929A /* AllItemsTests.swift in Sources */,
+				F852C5632368720A0035929A /* SulfuraTests.swift in Sources */,
+				F852C569236873300035929A /* Seeds.swift in Sources */,
+				F852C5672368721A0035929A /* NormalTests.swift in Sources */,
 				F80CE9D523683BD2009FEA4C /* GildedRoseKataTests.swift in Sources */,
+				F852C5642368720A0035929A /* BackstageTests.swift in Sources */,
+				F852C5652368720A0035929A /* BrieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
