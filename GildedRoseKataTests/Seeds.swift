@@ -64,5 +64,19 @@ struct Seeds {
         Item(name: Names.brie.rawValue, sellIn: 2, quality: 0),
         Item(name: Names.conjured.rawValue, sellIn: 3, quality: 0)
     ]
+    
+    static let invalidItems = [
+        Item(name: Names.normal1.rawValue, sellIn: 10, quality: -300),
+        Item(name: Names.backstage.rawValue, sellIn: 150, quality: -10),
+        Item(name: Names.brie.rawValue, sellIn: 2, quality: -12),
+        Item(name: Names.conjured.rawValue, sellIn: 2314, quality: -16),
+        Item(name: Names.sulfuras.rawValue, sellIn: -123, quality: 20),
+        Item(name: Names.sulfuras.rawValue, sellIn: -9999, quality: -12),
+        Item(name: Names.normal1.rawValue, sellIn: 100, quality: 120),
+        Item(name: Names.backstage.rawValue, sellIn: 15, quality: 900),
+        Item(name: Names.brie.rawValue, sellIn: 20, quality: 67),
+        Item(name: Names.conjured.rawValue, sellIn: 3, quality: 1023),
+        Item(name: Names.sulfuras.rawValue, sellIn: -1, quality: 100)
+    ]
 }
 

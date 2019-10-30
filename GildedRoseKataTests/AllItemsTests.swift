@@ -40,4 +40,11 @@ class AllItemsTests : XCTestCase {
         sut.updateQuality()
         XCTAssertTrue(sut.items.allSatisfy { $0.quality >= 0 }, "Quality should be >= 0")
     }
+    
+    func testUpdateInvalidItems() {
+        let input = Seeds.invalidItems
+        let sut = GildedRose(items: input)
+        sut.updateQuality()
+        XCTAssertEqual(sut.items.count, input.count, "Items array should be the same size of input array")
+    }
 }
