@@ -20,6 +20,7 @@
 		F852C569236873300035929A /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C568236873300035929A /* Seeds.swift */; };
 		F852C56B23697CE00035929A /* ItemStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C56A23697CE00035929A /* ItemStrategy.swift */; };
 		F852C56D236984330035929A /* ItemStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C56C236984330035929A /* ItemStrategyFactory.swift */; };
+		F852C56F236986470035929A /* ItemStrategyFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F852C56E236986470035929A /* ItemStrategyFactoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F852C568236873300035929A /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		F852C56A23697CE00035929A /* ItemStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStrategy.swift; sourceTree = "<group>"; };
 		F852C56C236984330035929A /* ItemStrategyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStrategyFactory.swift; sourceTree = "<group>"; };
+		F852C56E236986470035929A /* ItemStrategyFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStrategyFactoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				F852C5612368720A0035929A /* BackstageTests.swift */,
 				F852C5622368720A0035929A /* BrieTests.swift */,
 				F852C5602368720A0035929A /* SulfuraTests.swift */,
+				F852C56E236986470035929A /* ItemStrategyFactoryTests.swift */,
 				F80CE9D623683BD2009FEA4C /* Info.plist */,
 			);
 			path = GildedRoseKataTests;
@@ -243,6 +246,7 @@
 				F852C5672368721A0035929A /* NormalTests.swift in Sources */,
 				F80CE9D523683BD2009FEA4C /* GildedRoseKataTests.swift in Sources */,
 				F852C5642368720A0035929A /* BackstageTests.swift in Sources */,
+				F852C56F236986470035929A /* ItemStrategyFactoryTests.swift in Sources */,
 				F852C5652368720A0035929A /* BrieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

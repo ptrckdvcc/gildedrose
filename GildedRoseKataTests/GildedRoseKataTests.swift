@@ -9,6 +9,6 @@
 import XCTest
 @testable import GildedRoseKata
 
-class GildedRoseTests: XCTestCase {
+class GildedRoseTests : XCTestCase {
  
 }

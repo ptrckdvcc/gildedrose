@@ -11,7 +11,7 @@ import Foundation
 import XCTest
 @testable import GildedRoseKata
 
-class AllItemsTests: XCTestCase {
+class AllItemsTests : XCTestCase {
  
     func testUpdateEmptyArray() {
         let input:[Item] = []

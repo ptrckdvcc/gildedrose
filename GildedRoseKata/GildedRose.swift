@@ -8,6 +8,7 @@
 
 public class GildedRose {
     var items:[Item]
+    var strategyFactory:ItemStrategyFactory = ItemStrategyFactory()
     
     required public init(items:[Item]) {
         self.items = items
@@ -15,7 +16,7 @@ public class GildedRose {
     
     public func updateQuality() {
         for item in items {
-            guard let strategy = ItemStrategyFactory.strategyFor(item: item) else { continue }
+            let strategy = strategyFactory.strategyFor(item: item)
             strategy.updateQuality(item: item)
             strategy.updateSellIn(item: item)
         }

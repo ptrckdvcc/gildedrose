@@ -17,7 +17,7 @@ class ItemStrategyFactory {
         case conjured = "Conjured Mana Cake"
     }
     
-    static func strategyFor(item: Item) -> ItemStrategy? {
+    func strategyFor(item: Item) -> ItemStrategy {
         if let name = Names(rawValue: item.name) {
             switch name {
             case .brie: return BrieItemStrategy()
